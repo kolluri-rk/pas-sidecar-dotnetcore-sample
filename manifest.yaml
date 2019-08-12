@@ -1,0 +1,15 @@
+---
+applications:
+- name: sidecar-dependent-app
+  stack: cflinuxfs3
+  buildpacks:
+  - dotnet_core_buildpack
+  env:
+    ASPNETCORE_ENVIRONMENT: Delelopment
+    AuthzBaseUrl: http://localhost:8081
+
+  sidecars:
+  - name: auth-server
+    process_types:
+    - web
+    command: 'cd auth-server && exec ./auth-server-sidecar --urls http://0.0.0.0:8081'
