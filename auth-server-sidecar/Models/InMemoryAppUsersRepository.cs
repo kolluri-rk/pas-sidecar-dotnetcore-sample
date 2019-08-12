@@ -16,7 +16,7 @@ namespace auth_server_sidecar.Models
         {
             var users = new List<AppUser>
             {
-                new AppUser { Id = 1, AppId = 1, UserName = "stark", Scopes = new string[] {"admin", "todo_read, todo_write"} },
+                new AppUser { Id = 1, AppId = 1, UserName = "stark", Scopes = new string[] {"admin", "todo_read", "todo_write"} },
 
                 new AppUser { Id = 1, AppId = 2, UserName = "stark", Scopes = new string[] {"basic_user", "todo_read"} },
 
