@@ -1,0 +1,29 @@
+﻿@model sidecar_dependent_app.Models.UserAuthViewModel
+
+@{
+    ViewData["Title"] = "App1";
+}
+<h1>@ViewData["Title"]</h1>
+
+<br />
+<p>Logged-in User: Dave</p>
+<p>Scopes retrieved from sidecar</p>
+
+@if (Model.Scopes.Count() > 0)
+{
+
+<div>
+    @foreach (var scope in Model.Scopes)
+    {
+        <li>@scope</li>
+    }
+</div>
+
+}
+else
+{
+<div>
+    THERE ARE NO SCOPES AVAIALBLE
+</div>
+}
+
