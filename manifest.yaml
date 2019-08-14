@@ -2,6 +2,7 @@
 applications:
 - name: sidecar-dependent-app
   stack: cflinuxfs3
+  memory: 256M
   buildpacks:
   - dotnet_core_buildpack
   env:
