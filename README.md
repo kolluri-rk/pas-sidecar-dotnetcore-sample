@@ -23,3 +23,5 @@ A simple asp.net core mvc app that calls out to the `auth-server-sidecar` to get
 MVC app uses `AuthzBaseUrl` config setting to call out to webapi. This setting is passed as environment varibale in `manifest.yml`. In this sample AuthzBaseUrl was set to `http://localhost:8081`.
 
 Make sure to start the app on the **same port** in sidecar process. auth-server-sidecar api will be started with command: `cd auth-server && exec ./auth-server-sidecar --urls http://0.0.0.0:8081`
+
+*Note: In this sample, auth-server-sidecar is only providing authorization. We can extend the functionality to handle Authentication as well.* 
